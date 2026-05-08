@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI VIBE 2026 — Thiết kế Slide & Landing Page | Viettel Networks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        viettel: '#EE0033',
+                        navy: {
+                            DEFAULT: '#1A1F3A',
+                            dark: '#0F172A',
+                        },
+                        ai: {
+                            cyan: '#00D4FF',
+                            purple: '#7C3AED',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Be Vietnam Pro', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '12px',
+                        '2xl': '16px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .bg-gradient-ai { background: linear-gradient(135deg, #EE0033 0%, #00D4FF 100%); }
+        .bg-dark-section { background-color: #1A1F3A; color: white; }
+        .text-gradient { background: linear-gradient(to right, #EE0033, #00D4FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-red { box-shadow: 0 0 20px rgba(238, 0, 51, 0.4); }
+        .glow-ai { box-shadow: 0 0 25px rgba(0, 212, 255, 0.3); }
+        .btn-hover { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .btn-hover:hover { transform: scale(1.02); }
+        .btn-hover:active { transform: scale(0.98); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @keyframes pulse-slow { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .animate-pulse-slow { animation: pulse-slow 3s infinite; }
+    </style>
+</head>
+<body class="font-sans text-navy-dark bg-white overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-100 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-viettel rounded-full flex items-center justify-center text-white font-bold">V</div>
+                <span class="font-heading font-bold text-sm lg:text-base uppercase tracking-tight">Viettel Networks | <span class="text-viettel">AI VIBE 2026</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#muctieu" class="hover:text-viettel transition">Mục tiêu</a>
+                <a href="#doituong" class="hover:text-viettel transition">Đối tượng</a>
+                <a href="#noidung" class="hover:text-viettel transition">Nội dung</a>
+                <a href="#dangky" class="bg-viettel text-white px-6 py-2 rounded-full font-bold glow-red btn-hover">Đăng ký ngay</a>
+            </div>
+            <div class="md:hidden">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-dark-section overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-ai-cyan/30 text-ai-cyan text-sm font-semibold mb-6 animate-pulse-slow">
+                    <i data-lucide="rocket" class="w-4 h-4"></i> CHƯƠNG TRÌNH ĐÀO TẠO NỘI BỘ — VIETTEL NETWORKS
+                </div>
+                <h1 class="font-heading text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                    <span class="text-gradient uppercase">Hướng dẫn thiết kế Slide cơ bản & nâng cao</span>
+                </h1>
+                <p class="text-gray-300 text-lg lg:text-xl mb-10 leading-relaxed max-w-xl">
+                    Từ ý tưởng đến Slide đỉnh cao & Landing Page chuyên nghiệp — Bạn không cần biết code. Bạn chỉ cần biết mình muốn gì — AI sẽ làm phần còn lại.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="#dangky" class="bg-viettel text-white px-8 py-4 rounded-full font-bold text-lg glow-red btn-hover flex items-center justify-center gap-2">
+                        🚀 Đăng ký ngay — Hạn 06/05
+                    </a>
+                    <a href="#noidung" class="border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 btn-hover flex items-center justify-center gap-2">
+                        📋 Xem nội dung
+                    </a>
+                </div>
+                <div class="flex flex-wrap gap-6 text-sm text-gray-400">
+                    <div class="flex items-center gap-2"><i data-lucide="zap" class="text-yellow-400 w-4 h-4"></i> 3,5 giờ học nhanh</div>
+                    <div class="flex items-center gap-2"><i data-lucide="palette" class="text-ai-cyan w-4 h-4"></i> 2 sản phẩm thật</div>
+                    <div class="flex items-center gap-2"><i data-lucide="award" class="text-viettel w-4 h-4"></i> Chứng nhận KNL</div>
+                </div>
+            </div>
+            <div class="relative hidden lg:block">
+                <div class="absolute -inset-10 bg-ai-cyan/20 blur-[100px] rounded-full"></div>
+                <div class="relative bg-gray-800 rounded-2xl p-2 shadow-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000" alt="Claude AI Mockup" class="rounded-xl opacity-90">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-navy-dark/80 p-6 rounded-xl border border-ai-cyan/50 backdrop-blur-md">
+                        <div class="flex items-center gap-3 text-ai-cyan font-mono text-sm">
+                            <i data-lucide="sparkles"></i> AI is generating slide content...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="text-white/50 w-8 h-8"></i>
+        </div>
+    </section>
+
+    <div class="bg-white py-12 border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-12">
+                <div>
+                    <div class="text-4xl font-heading font-extrabold text-viettel mb-2 count-up" data-target="3.5">0</div>
+                    <div class="text-gray-500 font-medium">Giờ học tập trung</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-heading font-extrabold text-viettel mb-2 count-up" data-target="2">0</div>
+                    <div class="text-gray-500 font-medium">Sản phẩm thực tế</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-heading font-extrabold text-viettel mb-2 count-up" data-target="7">0</div>
+                    <div class="text-gray-500 font-medium">Điểm đạt chứng nhận</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-heading font-extrabold text-viettel mb-2 count-up" data-target="100">0</div>
+                    <div class="text-gray-500 font-medium">% Có chứng chỉ</div>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all">
+                <span class="font-bold text-xl">Claude</span>
+                <span class="font-bold text-xl">Gemini</span>
+                <span class="font-bold text-xl">NotebookLM</span>
+                <span class="font-bold text-xl">Canva</span>
+                <span class="font-bold text-xl">GitHub</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="muctieu" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-sm font-bold text-viettel tracking-widest uppercase mb-4">01 — MỤC TIÊU CHƯƠNG TRÌNH</h2>
+                <h3 class="text-4xl lg:text-5xl font-heading font-extrabold mb-6">Học để làm được việc thật, không phải học cho biết</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:-translate-y-2 reveal">
+                    <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-viettel mb-6">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Slide dưới 30 phút</h4>
+                    <p class="text-gray-600 leading-relaxed">Claude/Gemini/Canva sinh slide chuẩn brand Viettel, thay vì 3-5 tiếng làm thủ công.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:-translate-y-2 reveal">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Làm chủ Skill Claude</h4>
+                    <p class="text-gray-600 leading-relaxed">Đóng gói quy trình lặp đi lặp lại thành công cụ AI cá nhân hóa dùng lại được mãi mãi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:-translate-y-2 reveal">
+                    <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Tự build Landing Page</h4>
+                    <p class="text-gray-600 leading-relaxed">Không cần biết HTML/CSS, dùng AI sinh code và public lên GitHub hoàn toàn miễn phí.</p>
+                </div>
+            </div>
+
+            <div class="bg-navy rounded-2xl p-8 lg:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8 reveal">
+                <div class="flex-1">
+                    <div class="text-ai-cyan font-bold mb-2">SO SÁNH HIỆU QUẢ</div>
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                            <div class="text-red-400 font-bold mb-1">❌ TRUYỀN THỐNG</div>
+                            <div class="text-2xl font-bold">3-5 tiếng</div>
+                            <div class="text-sm text-gray-400">Làm thủ công từng slide</div>
+                        </div>
+                        <div class="bg-viettel/20 p-4 rounded-xl border border-viettel/50">
+                            <div class="text-green-400 font-bold mb-1">✅ VIBE CODING</div>
+                            <div class="text-2xl font-bold">30 phút</div>
+                            <div class="text-sm text-gray-400">Đã bao gồm tinh chỉnh</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 text-center lg:text-left">
+                    <p class="text-xl italic text-gray-300">"Tư duy Vibe Coding: Mô tả ý tưởng → AI sinh sản phẩm → Tinh chỉnh → Xuất bản."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-y border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-5xl lg:text-7xl font-heading font-extrabold mb-8">
+                        <span class="text-viettel">100% MIỄN PHÍ</span><br>cho CBCNV VTNet
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition">
+                            <div class="w-12 h-12 bg-viettel/10 text-viettel rounded-full flex items-center justify-center shrink-0"><i data-lucide="calendar"></i></div>
+                            <div>
+                                <div class="font-bold text-lg">Thời gian</div>
+                                <div class="text-gray-600 text-lg">8h30 – 12h00, Thứ Sáu, ngày 08/05/2026</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition">
+                            <div class="w-12 h-12 bg-viettel/10 text-viettel rounded-full flex items-center justify-center shrink-0"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <div class="font-bold text-lg">Địa điểm</div>
+                                <div class="text-gray-600 text-lg">Tầng G — Toà nhà Thái Bình / Trực tuyến qua Zoom</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition">
+                            <div class="w-12 h-12 bg-viettel/10 text-viettel rounded-full flex items-center justify-center shrink-0"><i data-lucide="user"></i></div>
+                            <div>
+                                <div class="font-bold text-lg">Hướng dẫn</div>
+                                <div class="text-gray-600 text-lg">Đ/c Đỗ Thị Ngát — Phòng Nhân sự, VTNet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-navy rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden reveal">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-viettel/20 blur-3xl rounded-full"></div>
+                    <h4 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i data-lucide="gift" class="text-viettel"></i> Quyền lợi đặc biệt
+                    </h4>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <i data-lucide="check-circle-2" class="text-viettel shrink-0"></i>
+                            <span><b>Chứng nhận nội bộ:</b> Đáp ứng KNL kỹ năng AI cho VTNet 2026.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <i data-lucide="check-circle-2" class="text-viettel shrink-0"></i>
+                            <span><b>Tài liệu độc quyền:</b> Bộ prompt mẫu "đọc là làm được" cho công việc hàng ngày.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <i data-lucide="check-circle-2" class="text-viettel shrink-0"></i>
+                            <span><b>Bonus mở rộng:</b> Hướng dẫn dùng Claude cho PPT/Excel/Word.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dangky" class="py-24 bg-gradient-to-br from-navy to-viettel text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl lg:text-6xl font-heading font-extrabold mb-8 leading-tight">
+                AI không thay thế bạn.<br>
+                <span class="text-ai-cyan italic">Người biết dùng AI sẽ thay thế bạn.</span>
+            </h2>
+            
+            <div id="countdown" class="flex justify-center gap-4 lg:gap-8 mb-16">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 min-w-[80px] lg:min-w-[120px] border border-white/20">
+                    <div id="days" class="text-3xl lg:text-5xl font-bold">00</div>
+                    <div class="text-xs lg:text-sm uppercase tracking-widest mt-2">Ngày</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 min-w-[80px] lg:min-w-[120px] border border-white/20">
+                    <div id="hours" class="text-3xl lg:text-5xl font-bold">00</div>
+                    <div class="text-xs lg:text-sm uppercase tracking-widest mt-2">Giờ</div>
+                </div>
+                <div id="minutes-box" class="bg-white/10 backdrop-blur-md rounded-2xl p-4 min-w-[80px] lg:min-w-[120px] border border-white/20">
+                    <div id="minutes" class="text-3xl lg:text-5xl font-bold">00</div>
+                    <div class="text-xs lg:text-sm uppercase tracking-widest mt-2">Phút</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 min-w-[80px] lg:min-w-[120px] border border-white/20">
+                    <div id="seconds" class="text-3xl lg:text-5xl font-bold">00</div>
+                    <div class="text-xs lg:text-sm uppercase tracking-widest mt-2">Giây</div>
+                </div>
+            </div>
+
+            <button class="bg-white text-viettel px-12 py-6 rounded-full font-heading font-extrabold text-2xl shadow-2xl btn-hover animate-pulse flex items-center justify-center gap-3 mx-auto mb-8">
+                🚀 ĐĂNG KÝ NGAY — GIỮ CHỖ TRƯỚC 06/05
+            </button>
+            <p class="text-white/80 text-lg mb-12">Chỉ cần 2 phút điền form • Miễn phí 100% cho CBCNV VTNet • Hẹn gặp bạn sáng Thứ Sáu</p>
+            <div class="text-white/60 font-medium">© 2026 VIETTEL NETWORKS — TỔNG CÔNG TY MẠNG LƯỚI</div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-dark py-12 text-white/50 border-t border-white/5">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="text-white font-heading font-bold mb-2">VIETTEL NETWORKS</div>
+                <p class="text-sm">Đ/c Mai Ngọc Minh — 0989 208 017</p>
+            </div>
+            <div class="flex gap-8 text-sm uppercase tracking-widest">
+                <a href="#" class="hover:text-white transition">Hỗ trợ</a>
+                <a href="#" class="hover:text-white transition">Tài liệu</a>
+                <a href="#" class="hover:text-white transition">Zalo</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="fomo-toast" class="fixed bottom-8 left-8 bg-white p-4 rounded-xl shadow-2xl border border-gray-100 flex items-center gap-4 translate-y-[200%] transition-all duration-500 z-[100]">
+        <div class="w-10 h-10 bg-viettel/10 rounded-full flex items-center justify-center text-viettel"><i data-lucide="user-plus"></i></div>
+        <div>
+            <div id="fomo-name" class="font-bold text-navy-dark text-sm">Đ/c Nguyễn Văn A</div>
+            <div class="text-gray-500 text-xs">vừa đăng ký 3 phút trước</div>
+        </div>
+    </div>
+
+    <script>
+        // Khởi tạo Lucide Icons
+        lucide.createIcons();
+
+        // Countdown Timer
+        const targetDate = new Date('2026-05-06T23:59:59').getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+
+        // Scroll Reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const countUps = document.querySelectorAll('.count-up');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    if (entry.target.classList.contains('count-up')) {
+                        animateCount(entry.target);
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(el => observer.observe(el));
+        countUps.forEach(el => observer.observe(el));
+
+        function animateCount(el) {
+            const target = parseFloat(el.getAttribute('data-target'));
+            let current = 0;
+            const duration = 1500;
+            const start = performance.now();
+            
+            function update(time) {
+                const progress = Math.min((time - start) / duration, 1);
+                current = progress * target;
+                el.innerText = target % 1 === 0 ? Math.floor(current) : current.toFixed(1);
+                if (progress < 1) requestAnimationFrame(update);
+                else el.innerText = target;
+            }
+            requestAnimationFrame(update);
+        }
+
+        // FOMO Toast
+        const names = ["Đ/c Trần Văn B", "Đ/c Lê Thị C", "Đ/c Nguyễn Minh D", "Đ/c Phạm Hoàng E"];
+        const toast = document.getElementById('fomo-toast');
+        const toastName = document.getElementById('fomo-name');
+
+        function showToast() {
+            toastName.innerText = names[Math.floor(Math.random() * names.length)];
+            toast.style.transform = "translateY(0)";
+            setTimeout(() => {
+                toast.style.transform = "translateY(200%)";
+            }, 4000);
+        }
+        setInterval(showToast, 15000);
+    </script>
+
+    </body>
+</html>
